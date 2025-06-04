@@ -16,3 +16,14 @@ clone source
 cd src 
 git clone https://github.com/turtlebot/turtlebot4_simulator.git -b jazzy
 ```
+
+### Docker
+The repository provides a `Dockerfile` for running the simulator in a container. Build the image with:
+```bash
+docker build -t gmapping_py .
+```
+Run the container with:
+```bash
+docker run -it gmapping_py
+```
+The workspace is built during the image build and sourced automatically when the container starts.
